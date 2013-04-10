@@ -24,3 +24,18 @@ At the moment, the following permissions are read
 
 * views
   * select
+
+example
+-------
+
+This is a bit of example output
+
+```
+$ ./bin/pgpermissions | grep user1
+ user1        bar                 database         temporary, connect
+ user1        foo                 database         temporary, connect
+ user1        foogroup            group            member
+ user1        postgres            database         connect, temporary
+ user1        redmine             database         connect, temporary
+ user1        public.foo          table            select
+```
