@@ -13,7 +13,7 @@ sql_grants_summary() {
     usename,
     relation,
     relation_type,
-    array_to_string(array_agg(priv), ', ') permissions
+    array_to_string(array_agg(priv order by priv), ', ') permissions
    from ($1) data
   group by usename, relation, relation_type
   order by relation, usename;
